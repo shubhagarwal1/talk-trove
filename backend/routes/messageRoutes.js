@@ -10,6 +10,6 @@ const router = express.Router();
 
 router.route("/:chatId").get(protect, allMessages);
 router.route("/").post(protect, sendMessage);
-router.route("/edit-message").put(protect, editMessage);
+router.route("/edit-message").patch(protect, editMessage);
 
 module.exports = router;
